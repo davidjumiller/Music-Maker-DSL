@@ -81,25 +81,25 @@
                                 <code>
 <!--                             -->Sound Kick1 as Preset
 <!--                             -->    Pattern: x-xx-x
-<!--                             -->    Repeat: 10
+<!--                             -->    Repeat: 1
 <!--                             -->    UseSound: "Kick"
 <!--                             -->EndSound
 
 <!--                             -->Sound Melody1 as Clip
 <!--                             -->    Pattern: x
-<!--                             -->    Repeat: 5
+<!--                             -->    Repeat: 2
 <!--                             -->    UseSound: "C1 D2 F7"
 <!--                             -->    EndSound
 
 <!--                             -->Combination Draft1
 <!--                             -->    Track
-<!--                             -->        Volume: 10
-<!--                             -->        Components: [5*Kick1, 5*Melody1]
+<!--                             -->        Volume: 75
+<!--                             -->        Components: [5*Kick1, 1*Melody1]
 <!--                             -->    EndTrack
 <!--                             -->    Track
-<!--                             -->        Offset: 10
-<!--                             -->        Volume: 5
-<!--                             -->        Components: [15*Kick1, 6*Melody1]
+<!--                             -->        Offset: 100
+<!--                             -->        Volume: 25
+<!--                             -->        Components: [2*Melody1]
 <!--                             -->    EndTrack
 <!--                             -->EndCombination
 <!--                             -->Play Draft1
