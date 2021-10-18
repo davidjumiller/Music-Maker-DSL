@@ -1,4 +1,4 @@
-# Project1Group24
+# The Music Maker Project (MMP) - Project1Group24
 
 <a href="https://music-maker-dsl-pyi3h.ondigitalocean.app/"> Demo: Live Server </a> (please use the latest versions of MS Edge or Google Chrome only).
 
