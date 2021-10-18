@@ -11,7 +11,7 @@ The objective of this DSL is to enable software developers that have negligible/
 ## Technical Context
 MMP is implemented using a modular, event-based approach and relies on the JavaScript's native <a href="https://www.w3.org/TR/webaudio/">Web Audio API standard</a> for producing and recording sounds. This is an immensively powerful, ever-evolving standard and provides plently of opportunity for future extensibility/devlopment of this project.
 
-## Getting Started
+## The Basics
 
 ### Structure
 
@@ -21,7 +21,7 @@ The DSL consists of 3 major blocks:
 * Combination
 * Play
 
-#### Sound
+### Sound
 
 The sound block describes individual audio tracks to be used for creating your sound effect.
 
@@ -30,7 +30,7 @@ There are 2 types of sound blocks:
 * Preset
 * Clip
 
-##### Preset
+#### Preset
 
 Preset sound blocks represent the use of an exisiting sound effect.
 
@@ -44,9 +44,9 @@ EndSound
 
 You specify which sound effect you want to use in the `UseSound` attribute. Currently, you can choose from Kick, Bass, OpenHats, ClosedHats & Snare.
 
-##### Clip
+#### Clip
 
-Clip sound blocks represent the use of a sequence of mucial notes.
+Clip sound blocks represent the use of a sequence of musical notes.
 
 ```
 Sound MyMelody as Clip
@@ -56,7 +56,7 @@ Sound MyMelody as Clip
 EndSound
 ```
 
-You specify the sequence of notes (with octaves) in the `UseSound` attribute as shown in the example sound block named 'MyMelody' above.
+You specify the sequence of notes (with octaves) in the `UseSound` attribute as shown in the example sound block, named 'MyMelody', above.
 
 In both types of sound blocks, you must also specify `Pattern` & `Repeat`.
 
@@ -65,7 +65,7 @@ x means that the sound specified in `UseSound` should be played and '-' represen
 
 `Repeat` denotes how many times you wish to repeat the pattern.
 
-#### Combination
+### Combination
 
 This block specifies how you would like to sequence the sounds you defined earlier.
 
@@ -89,17 +89,17 @@ As is illustrated by the way the DSL is strucuted, all Tracks in a combination a
 
 In a Track, you specify:
 
-* A Volume - loudness of the track.
-* OFfset - start time delay in milliseconds
+* Volume - loudness of the track.
+* Offset - start time delay in milliseconds
 
 and 
 
 * Components
 
-Components represents the `sounds` that a track should play.
+`Components` represents the sounds that a track should play.
 The sounds specified in the `components` section are played in sequence (one after the other) for each track.
 
-#### Play
+### Play
 
 To help you ideate/draft your sound effect, you are allowed to create multiple combination blocks in your code. 
 However, only one of them will played/rendered upon executuion.
@@ -139,7 +139,7 @@ EndCombination
 Play Draft1
 ```
 
-## Full Documenation
+## Documenation
 
 ```
 <!--                             -->program         : sound+ combination+ play
