@@ -309,19 +309,17 @@ EndSound
 Sound Melody1 as Clip
 	Pattern: x
   Repeat: 5
-	UseSound: “CM Dm FM”
+	UseSound: “C1 D2 F5”
 	Volume: 15
 EndSound
 
 
 Combination Draft1
 	Track
-		MaxLength: 50
 		Volume: 10
 		Components: [5*Kick1, 5*Melody1]
 	EndTrack
 	Track
-		MaxLength: 35
 		Offset: 10
 		Volume: 5
 		Components: [15*Kick1, 6*Melody1]
