@@ -301,14 +301,14 @@ Play Draft1
 ~~~
 Sound Kick1 as Preset
 	Pattern: x-xx-x
-  Repeat: 10
+  	Repeat: 10
 	UseSound: "Kick"
 	Volume: 10
 EndSound
 
 Sound Melody1 as Clip
 	Pattern: x
-  Repeat: 5
+  	Repeat: 5
 	UseSound: “C1 D2 F5”
 	Volume: 15
 EndSound
