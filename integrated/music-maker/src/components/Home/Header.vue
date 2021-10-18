@@ -29,7 +29,7 @@
                             <pre>
                                 <code>
 <!--                             -->program         : sound+ combination+ play
-<!--                             -->sound           : 'Sound ' soundname 'as ' SUBTYPE pattern repeat? usesound 'EndSound'
+<!--                             -->sound           : 'Sound ' soundname 'as ' SUBTYPE pattern repeat usesound 'EndSound'
 <!--                             -->soundname       : TEXT
 <!--                             -->pattern         : 'Pattern:' TEXT
 <!--                             -->repeat          : 'Repeat:' NUM
