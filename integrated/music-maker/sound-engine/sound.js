@@ -1,5 +1,5 @@
 /*
-    Sound rendering system
+    Sound rendering system; Processes a sound block.
 */
 
 import Crunker from 'crunker';
@@ -9,7 +9,6 @@ import Crunker from 'crunker';
 import kick from '../src/assets/presets/kick.wav';
 import cHats from '../src/assets/presets/closedhats.wav';
 import oHats from '../src/assets/presets/oh.wav';
-
 import snare from '../src/assets/presets/snare.wav';
 import bass from '../src/assets/presets/bass.wav';
 
@@ -31,16 +30,13 @@ builder.render = async(soundSpec) => {
                 let data = await generateFromClip(soundSpec);
                 resolve(data);
             } else {
-                reject({error: true, desc: `invalid sound type ${soundSpec.subtype}`})
+                reject(`invalid sound type ${soundSpec.subtype}`);
             }
 
         } catch (error) {
             reject(error);
-
         }
-
         
-
     })
 }
 
@@ -73,11 +69,12 @@ const generateFromPreset = (soundSpec) => {
             } else if (pattern == '-') {
                 crunkerManifest.push(emptyAudio);
             } else {
-                reject({error: true, desc: `Format of pattern in sound block '${soundSpec.name}' is not valid`});
+                reject(`Format of pattern in sound block '${soundSpec.name}' is not valid`);
             }
         }
 
         // Manage Repeat
+        
         let temp = crunkerManifest;
         for (let i = 1; i < soundSpec.repeat; i++) {
             crunkerManifest = crunkerManifest.concat(temp);
@@ -111,7 +108,7 @@ const generateFromClip = (soundSpec) => {
             let freq = factor * 440;
 
             if (stp == -1) {
-                reject({error: true, desc: `Sequence of notes in sound block '${soundSpec.name}' is not valid`});
+                reject(`Sequence of notes in sound block '${soundSpec.name}' is not valid`);
                 
                 break;
 
@@ -135,7 +132,7 @@ const generateFromClip = (soundSpec) => {
             } else if (pattern == '-') {
                 notesSeqManifest = notesSeqManifest.concat([0]);
             } else {
-                reject({error: true, desc: `Format of pattern in sound block '${soundSpec.name}' is not valid`});
+                reject(`Format of pattern in sound block '${soundSpec.name}' is not valid`);
             }
         }
 

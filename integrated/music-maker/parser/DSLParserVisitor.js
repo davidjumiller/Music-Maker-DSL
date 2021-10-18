@@ -39,7 +39,7 @@ export default class DSLParserVisitor extends antlr4.tree.ParseTreeVisitor {
 
 		// Throw error if crucial values are not set
 		if (!("pattern" in sound) | !("usesound" in sound)) {
-			throw 'Error: Key sound value not defined';
+			throw new Error('Error: Key sound value not defined');
 		}
 	  	return sound;
 	}
@@ -79,7 +79,7 @@ export default class DSLParserVisitor extends antlr4.tree.ParseTreeVisitor {
 
 		// Throw error if no components are included
 		if (!("components" in track)) {
-			throw 'Error: Track invalid, no components included';
+			throw new Error('Error: Track invalid, no components included');
 		}
 
 	  	return track;

@@ -25,7 +25,7 @@ dsl.interpret = (input) => {
         parser.buildParseTrees = true;
 
     } catch(e) {
-        console.log("Syntax Error: Invalid syntax");
+        throw(e);
     }
 
     try {
@@ -33,11 +33,9 @@ dsl.interpret = (input) => {
         tree = parser.program();
         visitor = new Visitor();
         val = tree.accept(visitor);
-
-        console.log(val);
         return val;
     } catch(e) {
-        console.log("Syntax Error: Missing crucial values");
+        throw(e);
     }
 
 }

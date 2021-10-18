@@ -1,3 +1,7 @@
+/* Global CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
 .align-right {
     text-align: right;
 }
@@ -9,7 +13,6 @@
 body{
     font: bold;
     font-family: sans-serif;
-    overflow: hidden;
 }
 
 .btm-round {
@@ -31,6 +34,8 @@ body{
     background-color: #F0F3F5;
     border-radius: 1em;
     /* width: 100%; */
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
 }
 
 .container-card {
@@ -43,8 +48,9 @@ body{
     flex-direction: column;
 }
 
-.content-fill {
-    flex: 1 1 auto;
+#editor-container {
+    height: 70vh;
+    max-height: 70vh;
 }
 
 .font-regular{
@@ -66,8 +72,9 @@ body{
     background: linear-gradient(180deg, #ECFFF8 0%, #FDFDFD 100%);
     flex: 0 1 10%;
     color: #58E2CC;
-    font-family: cursive;
+    font-family: "M PLUS Rounded 1c";
     align-content: center;
+    min-height: 100px;
 }
 
 .header-row > * {
@@ -101,9 +108,7 @@ pre code {
     background-color: inherit;
     border: none;
     color: #00A6DA;
-    height: 95%;
-    max-height: 95%;
-    overflow-y: auto;
+    overflow-y: none;
     resize: none;
     width: thin;
     /* scrollbar-color: #00A6DA #919395; */
@@ -148,4 +153,35 @@ pre code {
 .top-round {
     border-radius: 1em 1em 0em 0em;
     box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.header-btn-group button{
+    margin-right: 7px;
+    font-weight: 800 !important;
+}
+
+#text-logo {
+    height: 50px;
+    padding-bottom: 11px;
+}
+
+#logo {
+    height: 55px;
+    padding-bottom: 11px;
+}
+
+#output-container {
+    height: 70vh;
+    max-height: 70vh;
+    overflow-y: auto;
+    border-radius: 0 0 1em 0;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.history-header {
+    border-radius: 0 1em 0 0 !important;
 }
