@@ -142,25 +142,25 @@ Play Draft1
 ## Documenation
 
 ```
-<!--                             -->program         : sound+ combination+ play
-<!--                             -->sound           : 'Sound ' soundname 'as ' SUBTYPE pattern repeat usesound 'EndSound'
-<!--                             -->soundname       : TEXT
-<!--                             -->pattern         : 'Pattern:' TEXT
-<!--                             -->repeat          : 'Repeat:' NUM
-<!--                             -->usesound        : 'UseSound:' USESOUNDS '"'
-<!--                             -->combination     : 'Components:' TEXT track+ 'EndCombination'
-<!--                             -->track           : 'Track' offset? volume? components* 'EndTrack'
-<!--                             -->offset          : 'Offset:' NUM
-<!--                             -->volume          : 'Volume:' NUM
-<!--                             -->components      : 'Components:' '[' component [','component]* ']'
-<!--                             -->component       : NUM? '*' COMPONENT_NAME
-<!--                             -->play            : 'Play' TEXT
+program         : sound+ combination+ play
+sound           : 'Sound ' soundname 'as ' SUBTYPE pattern repeat usesound 'EndSound'
+soundname       : TEXT
+pattern         : 'Pattern:' TEXT
+repeat          : 'Repeat:' NUM
+usesound        : 'UseSound:' USESOUNDS '"'
+combination     : 'Components:' TEXT track+ 'EndCombination'
+track           : 'Track' offset? volume? components* 'EndTrack'
+offset          : 'Offset:' NUM
+volume          : 'Volume:' NUM
+components      : 'Components:' '[' component [','component]* ']'
+component       : NUM? '*' COMPONENT_NAME
+play            : 'Play' TEXT
 
-<!--                             -->TEXT            : ~[[\]\r\n ]+
-<!--                             -->SUBTYPE         : 'Preset' | 'Clip';
-<!--                             -->NUM             : [0-9]+
-<!--                             -->USESOUNDS       : ~[[\]'"]+
-<!--                             -->COMPONENT_NAME  : ~[[\]\r\n,* ]+
+TEXT            : ~[[\]\r\n ]+
+SUBTYPE         : 'Preset' | 'Clip';
+NUM             : [0-9]+
+USESOUNDS       : ~[[\]'"]+
+COMPONENT_NAME  : ~[[\]\r\n,* ]+
 ```
 
 In addition to the grammar rules above, a few logical rules are in place in order for the DSL to
