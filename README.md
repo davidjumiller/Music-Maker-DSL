@@ -1,7 +1,5 @@
 # The Music Maker Project (MMP) - Project1Group24
 
-<a href="https://music-maker-dsl-pyi3h.ondigitalocean.app/"> Demo: Live Server </a> (please use the latest versions of MS Edge or Google Chrome only).
-
 ## Introduction
 The Music Maker Project (MMP) is a Domain-Specific Language (DSL) that allows you to quickly create basic sound effects and export them as WAV files.
 
